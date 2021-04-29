@@ -10,7 +10,7 @@ const forecast = (lat, lng, callback) => {
     } else {
       callback(
         undefined,
-        `${body.current.weather_descriptions[0]}. Currently it's ${body.current.temperature} kelvin, but it feels like ${body.current.feelslike} kelvin.`
+        `${body.current.weather_descriptions[0]}. Currently it's ${body.current.temperature} kelvin, but it feels like ${body.current.feelslike} kelvin. The local time is ${body.location.localtime}.`
       );
     }
   });
